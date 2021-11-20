@@ -9,10 +9,10 @@ from .views import showSouthAmericaPageView
 
 urlpatterns = [
     path("", showtripsPageView, name="showtrips"),
-    path("africa/", showAfricaPageView, name="africa"), #maybe will need to change the name
-    path("asia/", showAsiaPageView, name="asia"),
-    path("australia/", showAustraliaPageView, name="australia"),
-    path("europe/", showEuropePageView, name="europe"),
-    path("northamerica/", showNorthAmericaPageView, name="northamerica"),
-    path("southamerica/", showSouthAmericaPageView, name="southamerica"),
+    path("africa/", showAfricaPageView, name="realestate"), #maybe will need to change the name africa
+    path("asia/", showAsiaPageView, name="auto"), #asia
+    path("australia/", showAustraliaPageView, name="antique"), #australia
+    path("europe/", showEuropePageView, name="bankaccount"), #europe
+    path("northamerica/", showNorthAmericaPageView, name="stocks/bonds"), #northamerica
+    path("southamerica/", showSouthAmericaPageView, name="donate"), #southamerica
 ]
