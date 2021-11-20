@@ -1,42 +1,64 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Destination
+from .models import TripCategory
+
+
 
 # Create your views here.
 def showtripsPageView(request) :
     return render(request, 'travelsites/showTrips.html')
 
 def showAfricaPageView(request) :
+    id = TripCategory.objects.get(description = "Africa")
+    data = Destination.objects.get(trip_category_id = id)
     context = {
-        "area" : "Africa"
+        "area" : id.description,
+        "image" : data.main_photo
     }
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showAsiaPageView(request) :
+    id = TripCategory.objects.get(description = "Asia")
+    data = Destination.objects.get(trip_category_id = id)
     context = {
-        "area" : "Asia"
+        "area" : id.description,
+        "image" : data.main_photo
     }
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showAustraliaPageView(request) :
+    id = TripCategory.objects.get(description = "Australia")
+    data = Destination.objects.get(trip_category_id = id)
     context = {
-        "area" : "Australia"
+        "area" : id.description,
+        "image" : data.main_photo
     }
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showEuropePageView(request) :
+    id = TripCategory.objects.get(description = "Europe")
+    data = Destination.objects.get(trip_category_id = id)
     context = {
-        "area" : "Europe"
+        "area" : id.description,
+        "image" : data.main_photo
     }
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showNorthAmericaPageView(request) :
+    id = TripCategory.objects.get(description = "North America")
+    data = Destination.objects.get(trip_category_id = id)
     context = {
-        "area" : "North America"
+        "area" : id.description,
+        "image" : data.main_photo
     }
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showSouthAmericaPageView(request) :
+    id = TripCategory.objects.get(description = "South America")
+    data = Destination.objects.get(trip_category_id = id)
     context = {
-        "area" : "South America"
+        "area" : id.description,
+        "image" : data.main_photo
     }
     return render(request, 'travelsites/displaytrips.html', context)
