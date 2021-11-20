@@ -10,16 +10,16 @@ def showtripsPageView(request) :
     return render(request, 'travelsites/showTrips.html')
 
 def showAfricaPageView(request) :
-    id = TripCategory.objects.get(description = "Africa")
+    id = TripCategory.objects.get(description = "Africa") # change to Real Estate
     data = Destination.objects.get(trip_category_id = id)
     context = {
-        "area" : id.description,
-        "image" : data.main_photo
+        "area" : id.description, #change id description to Real Estate in the database
+        "image" : data.main_photo 
     }
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showAsiaPageView(request) :
-    id = TripCategory.objects.get(description = "Asia")
+    id = TripCategory.objects.get(description = "Asia") # change to Auto
     data = Destination.objects.get(trip_category_id = id)
     context = {
         "area" : id.description,
@@ -28,7 +28,7 @@ def showAsiaPageView(request) :
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showAustraliaPageView(request) :
-    id = TripCategory.objects.get(description = "Australia")
+    id = TripCategory.objects.get(description = "Australia") # change to Bank Account
     data = Destination.objects.get(trip_category_id = id)
     context = {
         "area" : id.description,
@@ -37,7 +37,7 @@ def showAustraliaPageView(request) :
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showEuropePageView(request) :
-    id = TripCategory.objects.get(description = "Europe")
+    id = TripCategory.objects.get(description = "Europe") # change to Stocks/Bonds
     data = Destination.objects.get(trip_category_id = id)
     context = {
         "area" : id.description,
@@ -46,7 +46,7 @@ def showEuropePageView(request) :
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showNorthAmericaPageView(request) :
-    id = TripCategory.objects.get(description = "North America")
+    id = TripCategory.objects.get(description = "North America") # change to Antique!
     data = Destination.objects.get(trip_category_id = id)
     context = {
         "area" : id.description,
@@ -55,7 +55,7 @@ def showNorthAmericaPageView(request) :
     return render(request, 'travelsites/displaytrips.html', context)
 
 def showSouthAmericaPageView(request) :
-    id = TripCategory.objects.get(description = "South America")
+    id = TripCategory.objects.get(description = "South America") # change to Donate!
     data = Destination.objects.get(trip_category_id = id)
     context = {
         "area" : id.description,

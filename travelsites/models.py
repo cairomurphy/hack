@@ -8,7 +8,7 @@ class TripCategory(models.Model):
     def __str__(self):
         return (self.description)
 
-class Destination(models.Model):
+class Destination(models.Model): #may need to change the fields in the database - be careful!
     trip_category = models.OneToOneField(TripCategory, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
     days = models.IntegerField(default=0)
